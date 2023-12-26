@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+    
+    <title>Magic game</title>
+    <style>
+      .header-btns:hover{
+        background: linear-gradient(180deg, #7C3787 0%, #A901C2 0.01%, rgba(86, 47, 92, 0.13) 99.99%, #562F5C 100%);
+      }
+      .header-btns:active{
+      
+        background: linear-gradient(180deg, #C126F8 0%, rgba(193, 38, 248, 0.12) 99.99%, rgba(193, 38, 248, 0.00) 100%, rgba(193, 38, 248, 0.00) 100%);
+      }
+         .bron{
+            padding-top:247px ;
+            color: #FFF;
+
+text-align: center;
+font-family: Montserrat;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 133%; /* 53.2px */
+         }
+        label.error{
+            display: none!important;
+        }
+
+        form {
+       
+            display: flex;
+            gap: 25px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 34px;
+          
+          }
+         
+        form input {
+          color: var(--5, #7E868E);
+          /* 15px, Regular */
+          padding: 0px 20px; 
+          font-family: Montserrat;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 24px */
+            height: 73px;
+            border-radius: 30px;
+            background: var(--11, #F2F6FA);
+            
+          
+           gap: 25px;
+            outline: none;
+            width: 437px;
+        }
+        
+        form input.error{
+            border-color:red;
+            box-shadow: 0 0 5px red;
+        }
+
+        input::placeholder {
+         
+          padding: 16px 224px 13px 16px;
+            color: var(--5, #7E868E);
+            /* 15px, Regular */
+            
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 24px */
+          }
+          .header-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 22px 41px;
+            background: linear-gradient(
+    180deg,
+    #562f5c 0%,
+    #562f5c 0.01%,
+    rgba(86, 47, 92, 0.13) 99.99%,
+    rgba(86, 47, 92, 0) 100%
+  );    
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+          
+          .header-buttons {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #ffffff;
+            text-decoration: none;
+          }
+     form button{
+        margin-top: 33px;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="index.html" class="logo">
+            <img src="img/Group 18 (1).png" alt="" />
+          </a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="index.html" class="nav-list__link active">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="oklube.html" class="nav-list__link">О клубе</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="prais.html" class="nav-list__link">Прайс</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="games.html" class="nav-list__link">Игры</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="kontacts.html" class="nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="phone">
+            <div class="place-holder">
+              <div class="phoneimg">
+                <img class="icon" src="img/иконка телефон.png" alt="" />
+              </div>
+              <div class="number">
+                <a class="num" href="">+7 996 353-16-58</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+           <div class="bron">
+            Бронируй онлайн
+           </div>
+        <form action="sender.php" method="post">
+            <input type="text" class="name" name="name" placeholder="Имя" required>
+        
+            <input type="text" class="phone" name="phone" placeholder="Номер телефона">
+            <input type="email" name="email" placeholder="Email" required>
+            
+           
+            <button type="button" class="header-btns">
+                <a href="lastpage.html" class="header-buttons">Забронировать</a>
+              </button>
+            <div class="status"></div>
+        </form>
+      </div>
+
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <ul class="column-1">
+                <li>Мы всегда на связи!</li>
+                <li>Санкт-Петербург,</li>
+                <li>Панфиловская ул. 31</li>
+
+                <li><a href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <ul class="column-2">
+                <li><a href=""> </a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <div class="column-3"></div>
+            </div>
+            <div class="footer-col">
+              <ul class="column-4">
+                <li><a href="#">magic.game@mail.ru</a></li>
+                <li><a href="#">+7 996 35316-58</a></li>
+
+                <li><span>&copy; 2023</span> Все права защищены</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Button trigger modal -->
+
+  </body>
+</html>
